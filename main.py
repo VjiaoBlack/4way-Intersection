@@ -2,7 +2,6 @@
 from sys import argv
 import pygame
 from pygame.locals import *
-from maze import Maze
 import math
 import random
 
@@ -131,12 +130,6 @@ class Game:
     self.turning_cars = []
 
   def start(self):
-    self.maze_obj = Maze(*self.dim)# pass args to change maze size: Maze(10, 10)
-    if self.diff == 0:
-      self.maze_obj.generate(self.maze_obj.maze[(0,0)])
-    else:
-      self.maze_obj.generate()
-
     self.draw_track()
     self.loop()
 
